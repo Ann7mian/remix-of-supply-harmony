@@ -40,10 +40,12 @@ export const Route = createFileRoute("/portal")({
 });
 
 type Decision = null | "aceptado" | "otra" | "esperar";
+type CaptureMethod = null | "pos" | "manual" | "scan";
 
 function Portal() {
   const [decision, setDecision] = useState<Decision>(null);
   const [inventoryConnected, setInventoryConnected] = useState(false);
+  const [captureMethod, setCaptureMethod] = useState<CaptureMethod>(null);
   const [orderDelivered, setOrderDelivered] = useState(false);
   const [surveyDone, setSurveyDone] = useState(false);
 
