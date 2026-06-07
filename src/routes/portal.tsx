@@ -259,7 +259,7 @@ function Confirmation({ decision, onReset }: { decision: Exclude<Decision, null>
 
 /* ============ Inventario Conectado ============ */
 
-function ConnectInventory({ onConnect }: { onConnect: () => void }) {
+function ConnectInventory({ onConnect, onBack }: { onConnect: () => void; onBack?: () => void }) {
   const benefits = [
     { icon: AlertTriangle, label: "Alertas de agotamiento" },
     { icon: RefreshCw, label: "Reposición inteligente" },
