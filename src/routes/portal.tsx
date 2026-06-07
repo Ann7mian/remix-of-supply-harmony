@@ -186,10 +186,26 @@ function Portal() {
           <TabsContent value="inventario" className="mt-4">
             {inventoryConnected ? (
               <InventoryPanel />
+            ) : captureMethod === null ? (
+              <InventoryMethodChooser onSelect={setCaptureMethod} />
+            ) : captureMethod === "pos" ? (
+              <ConnectInventory
+                onConnect={() => setInventoryConnected(true)}
+                onBack={() => setCaptureMethod(null)}
+              />
+            ) : captureMethod === "manual" ? (
+              <ManualCapture
+                onSave={() => setInventoryConnected(true)}
+                onBack={() => setCaptureMethod(null)}
+              />
             ) : (
-              <ConnectInventory onConnect={() => setInventoryConnected(true)} />
+              <ScanNotebook
+                onSave={() => setInventoryConnected(true)}
+                onBack={() => setCaptureMethod(null)}
+              />
             )}
           </TabsContent>
+
 
           {/* ===== Oportunidades de crecimiento ===== */}
           {inventoryConnected && (
