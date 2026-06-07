@@ -326,6 +326,7 @@ function InventoryPanel() {
   ];
   return (
     <div className="space-y-4">
+      <AdaptabilityCard />
       <div className="rounded-3xl border border-border bg-card p-5 shadow-soft">
         <div className="flex items-center gap-2">
           <Package className="h-4 w-4 text-ai" />
