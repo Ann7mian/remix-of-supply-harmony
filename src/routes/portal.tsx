@@ -268,6 +268,7 @@ function ConnectInventory({ onConnect, onBack }: { onConnect: () => void; onBack
   ];
   return (
     <div className="space-y-4">
+      {onBack && <BackToMethods onBack={onBack} />}
       <div className="overflow-hidden rounded-3xl bg-gradient-ai p-5 text-ai-foreground shadow-ai">
         <div className="flex items-start gap-3">
           <span className="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-white/15">
