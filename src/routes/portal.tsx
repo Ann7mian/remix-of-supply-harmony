@@ -16,7 +16,14 @@ import {
   Brain,
   Plus,
   Gauge,
+  Camera,
+  Pencil,
+  ChevronRight,
+  ChevronLeft,
+  Loader2,
+  Trash2,
 } from "lucide-react";
+import { Input } from "@/components/ui/input";
 import { Logo } from "@/components/brand/Logo";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { ViewSwitcher } from "@/components/platform/ViewSwitcher";
